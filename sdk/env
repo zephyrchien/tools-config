@@ -1,0 +1,48 @@
+#!/bin/sh
+
+__SDK_HOME__="$HOME/Documents/sdk"
+
+# clang
+__CLANG_HOME__="${__SDK_HOME__}/clang"
+case ":${PATH}:" in
+    *:"${__CLANG_HOME__}/bin":*)
+        ;;
+    *)
+	export CLANG_BIN="${__CLANG_HOME__}/bin"
+	export PATH="$CLANG_BIN:$PATH"
+        ;;
+esac
+
+#golang
+__GO_HOME__="${__SDK_HOME__}/go"
+case ":${PATH}:" in
+    *:"${__GO_HOME__}/bin":*)
+        ;;
+    *)
+	export GOROOT="${__GO_HOME__}"
+	export GOPATH="${__GO_HOME__}/3rd"
+	export GOBIN="${__GO_HOME__}/bin"
+	export PATH="$GOBIN:$PATH"
+        ;;
+esac
+
+#zig
+__ZIG_HOME__="${__SDK_HOME__}/zig"
+case ":${PATH}:" in
+    *:"${__ZIG_HOME__}":*)
+        ;;
+    *)
+	export PATH="${__ZIG_HOME__}:$PATH"
+        ;;
+esac
+
+# pure
+__PURE_HOME__="${__SDK_HOME__}/pure"
+case ":${PATH}:" in
+    *:"${__PURE_HOME__}":*)
+        ;;
+    *)
+	export PATH="${__PURE_HOME__}:$PATH"
+        ;;
+esac
+

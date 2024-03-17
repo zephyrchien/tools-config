@@ -1,0 +1,77 @@
+theme = "home"
+
+[editor]
+mouse = false
+true-color = true
+auto-format = false
+text-width = 120
+shell = ["bash", "-c"]
+bufferline = "multiple"
+line-number = "relative"
+default-line-ending = "lf"
+
+[editor.statusline]
+right = [
+  "diagnostics",
+  "register",
+  "selections",
+  "position-percentage",
+  "file-type",
+  "file-encoding"
+]
+
+
+[editor.cursor-shape]
+insert = "bar"
+
+[editor.file-picker]
+hidden = true
+
+#[editor.indent-guides]
+#render = true
+#character = "╎"
+#skip-levels = 3
+
+[editor.whitespace]
+render = { tab = "all" }
+characters = { tab = "→" }
+
+[keys.normal]
+up = "no_op"
+down = "no_op"
+left = "no_op"
+right = "no_op"
+pageup = "no_op"
+pagedown = "no_op"
+home = "no_op"
+end = "no_op"
+"C-r" = ":reload"
+"C-h" = "jump_view_left"
+"C-l" = "jump_view_right"
+"C-k" = "jump_view_up"
+"C-j" = "jump_view_down"
+"C-/" = "toggle_comments"
+"C-7" = "toggle_comments"
+"C-c" = "copy_selection_on_next_line"
+"C" = "copy_selection_on_prev_line"
+"^" = "goto_first_nonwhitespace"
+"$" = "goto_line_end"
+
+[keys.select]
+"capslock" = "normal_mode"
+"^" = "goto_first_nonwhitespace"
+"$" = "goto_line_end"
+
+[keys.insert]
+pageup = "no_op"
+pagedown = "no_op"
+home = "no_op"
+end = "no_op"
+"capslock" = "normal_mode"
+"C-a" = "goto_first_nonwhitespace"
+"C-e" = "goto_line_end"
+"A-h" = "move_char_left"
+"A-l" = "move_char_right"
+"A-j" = "move_visual_line_down"
+"A-k" = "move_visual_line_up"
+

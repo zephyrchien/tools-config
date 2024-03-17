@@ -1,0 +1,27 @@
+[language-server.clangd]
+command = "clangd"
+args = ["--header-insertion=never"]
+
+[use-grammars]
+only = [
+  "c", "cpp", "d", "rust", "zig", "go", "haskell",
+  "python", "javascript", "lua", "bash",
+  "json", "toml", "yaml", "make", "cmake"
+]
+
+[[language]]
+name = "c"
+indent = { tab-width = 2, unit = "  " }
+
+[[language]]
+name = "cpp"
+indent = { tab-width = 2, unit = "  " }
+
+[[language]]
+name = "haskell"
+indent = { tab-width = 2, unit = "  " }
+
+[[language]]
+name = "python"
+language-servers = ["pyright"]
+

@@ -1,0 +1,21 @@
+inherits = "github-light"
+
+"ui.background" = { fg = "white" }
+"type" = { fg = "scale.orange.6" }
+"type.builtin" = { fg = "scale.orange.6" } 
+"function.method" = "home.orange"
+"function.builtin" = "home.green"
+"function.macro" = "home.green"
+"variable" = { fg = "fg.default", underline = { style = "line"} }
+"variable.parameter" = "home.blue"
+"variable.other.member" = "home.orange"
+"keyword" = { fg = "scale.red.5", modifiers = ["italic"] }
+"keyword.return" = { fg = "scale.red.5", midifiers = [] }
+"namespace" = "home.green"
+
+[palette]
+"home.green" = "#008000"
+"home.blue" = "#0969da"
+"home.pink" = "#ff44b2"
+"home.orange" = "#ee4400"
+
