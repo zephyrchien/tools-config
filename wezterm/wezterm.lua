@@ -8,16 +8,16 @@ local config = {
   use_fancy_tab_bar = true,
   tab_bar_at_bottom = true,
   hide_tab_bar_if_only_one_tab = true,
-  warn_about_missing_glyphs = false,
   term = 'wezterm',
-  font = term.font({
-    family = 'Fira Code',
-    weight = 'Medium',
-    harfbuzz_features = {
-      'calt=0', 'clig=0', 'liga=0',
-      'cv11', 'ss03', 'ss05', 'ss09'
-    }
-  }),
+  font = term.font_with_fallback({
+    {
+      family = 'Fira Code',
+      weight = 'Medium',
+      harfbuzz_features = {
+        'calt=0', 'clig=0', 'liga=0',
+        'cv11', 'ss03', 'ss05', 'ss09'
+      }
+    }, 'FiraCode Nerd Font' }),
   font_size = 16,
   color_scheme = 'Github',
   default_cursor_style = 'SteadyBar',
@@ -34,12 +34,18 @@ config.keys = {
   {
     key = 's',
     mods = 'LEADER',
-    action = act.SplitVertical({ domain = 'CurrentPaneDomain' })
+    action = act.SplitPane {
+      direction = 'Down',
+      size = { Percent = 30 },
+    },
   },
   {
     key = 'v',
     mods = 'LEADER',
-    action = act.SplitHorizontal({ domain = 'CurrentPaneDomain' })
+    action = act.SplitPane {
+      direction = 'Right',
+      size = { Percent = 30 },
+    },
   },
   {
     key = 'k',
