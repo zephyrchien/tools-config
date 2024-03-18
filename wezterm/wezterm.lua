@@ -28,7 +28,47 @@ config.keys = {
     key = 'v',
     mods = 'LEADER',
     action = term.action.SplitHorizontal({ domain = 'CurrentPaneDomain' })
-  }
+  },
+  {
+    key = 'k',
+    mods = 'LEADER',
+    action = term.action.ActivatePaneDirection('Up')
+  },
+  {
+    key = 'j',
+    mods = 'LEADER',
+    action = term.action.ActivatePaneDirection('Down')
+  },
+  {
+    key = 'h',
+    mods = 'LEADER',
+    action = term.action.ActivatePaneDirection('Left')
+  },
+  {
+    key = 'l',
+    mods = 'LEADER',
+    action = term.action.ActivatePaneDirection('Right')
+  },
+  {
+    key = 'UpArrow',
+    mods = 'CTRL|SHIFT',
+    action = term.action.AdjustPaneSize({ 'Up', 1 })
+  },
+  {
+    key = 'DownArrow',
+    mods = 'CTRL|SHIFT',
+    action = term.action.AdjustPaneSize({ 'Down', 1 })
+  },
+  {
+    key = 'LeftArrow',
+    mods = 'CTRL|SHIFT',
+    action = term.action.AdjustPaneSize({ 'Left', 1 })
+  },
+  {
+    key = 'RightArrow',
+    mods = 'CTRL|SHIFT',
+    action = term.action.AdjustPaneSize({ 'Right', 1 })
+  },
 }
 
 config.mouse_bindings = {
