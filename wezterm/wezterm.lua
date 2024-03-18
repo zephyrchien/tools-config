@@ -3,8 +3,13 @@ local term = require('wezterm')
 local config = {
   use_ime = true,
   use_dead_keys = false,
-  font = term.font('Fira Code', {
+  font = term.font({
+    family = 'Fira Code',
     weight = 'Medium',
+    harfbuzz_features = {
+      'calt=0', 'clig=0', 'liga=0',
+      'cv11', 'ss03', 'ss05', 'ss09'
+    }
   }),
   font_size = 16,
   color_scheme = 'Github',
