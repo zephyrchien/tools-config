@@ -4,6 +4,11 @@ local act = term.action
 local config = {
   use_ime = true,
   use_dead_keys = false,
+  tab_bar_max_width = 64,
+  use_fancy_tab_bar = true,
+  tab_bar_at_bottom = true,
+  hide_tab_bar_if_only_one_tab = true,
+  term = 'wezterm',
   font = term.font({
     family = 'Fira Code',
     weight = 'Medium',
@@ -15,7 +20,7 @@ local config = {
   font_size = 16,
   color_scheme = 'Github',
   default_cursor_style = 'SteadyBar',
-  hide_tab_bar_if_only_one_tab = true,
+  inactive_pane_hsb = { saturation = 0.8, brightness = 0.6 }
 }
 
 config.leader = { key = 'a', mods = 'CTRL' }
