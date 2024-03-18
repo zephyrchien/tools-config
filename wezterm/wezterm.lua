@@ -1,4 +1,5 @@
 local term = require('wezterm')
+local act = term.action
 
 local config = {
   use_ime = true,
@@ -20,54 +21,59 @@ local config = {
 config.leader = { key = 'a', mods = 'CTRL' }
 config.keys = {
   {
+    key = 'z',
+    mods = 'LEADER',
+    action = act.TogglePaneZoomState
+  },
+  {
     key = 's',
     mods = 'LEADER',
-    action = term.action.SplitVertical({ domain = 'CurrentPaneDomain' })
+    action = act.SplitVertical({ domain = 'CurrentPaneDomain' })
   },
   {
     key = 'v',
     mods = 'LEADER',
-    action = term.action.SplitHorizontal({ domain = 'CurrentPaneDomain' })
+    action = act.SplitHorizontal({ domain = 'CurrentPaneDomain' })
   },
   {
     key = 'k',
     mods = 'LEADER',
-    action = term.action.ActivatePaneDirection('Up')
+    action = act.ActivatePaneDirection('Up')
   },
   {
     key = 'j',
     mods = 'LEADER',
-    action = term.action.ActivatePaneDirection('Down')
+    action = act.ActivatePaneDirection('Down')
   },
   {
     key = 'h',
     mods = 'LEADER',
-    action = term.action.ActivatePaneDirection('Left')
+    action = act.ActivatePaneDirection('Left')
   },
   {
     key = 'l',
     mods = 'LEADER',
-    action = term.action.ActivatePaneDirection('Right')
+    action = act.ActivatePaneDirection('Right')
   },
   {
     key = 'UpArrow',
     mods = 'CTRL|SHIFT',
-    action = term.action.AdjustPaneSize({ 'Up', 1 })
+    action = act.AdjustPaneSize({ 'Up', 1 })
   },
   {
     key = 'DownArrow',
     mods = 'CTRL|SHIFT',
-    action = term.action.AdjustPaneSize({ 'Down', 1 })
+    action = act.AdjustPaneSize({ 'Down', 1 })
   },
   {
     key = 'LeftArrow',
     mods = 'CTRL|SHIFT',
-    action = term.action.AdjustPaneSize({ 'Left', 1 })
+    action = act.AdjustPaneSize({ 'Left', 1 })
   },
   {
     key = 'RightArrow',
     mods = 'CTRL|SHIFT',
-    action = term.action.AdjustPaneSize({ 'Right', 1 })
+    action = act.AdjustPaneSize({ 'Right', 1 })
   },
 }
 
