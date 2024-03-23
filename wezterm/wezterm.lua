@@ -9,6 +9,7 @@ local config = {
   tab_bar_at_bottom = true,
   hide_tab_bar_if_only_one_tab = true,
   term = 'wezterm',
+  front_end = "WebGpu",
   font = term.font_with_fallback({
     {
       family = 'Fira Code',
@@ -21,7 +22,7 @@ local config = {
   font_size = 16,
   color_scheme = 'Github',
   default_cursor_style = 'SteadyBar',
-  inactive_pane_hsb = { saturation = 0.8, brightness = 0.6 }
+  inactive_pane_hsb = { saturation = 0.8, brightness = 0.6 },
 }
 
 config.leader = { key = 'a', mods = 'CTRL' }
