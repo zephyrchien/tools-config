@@ -37,7 +37,7 @@ config.keys = {
     mods = 'LEADER',
     action = act.SplitPane {
       direction = 'Down',
-      size = { Percent = 30 },
+      size = { Percent = 20 },
     },
   },
   {
