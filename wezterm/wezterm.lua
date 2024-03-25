@@ -23,10 +23,14 @@ local config = {
       }
     }, 'FiraCode Nerd Font' }),
   font_size = 14,
-  color_scheme = 'Github',
   default_cursor_style = 'SteadyBar',
   inactive_pane_hsb = { saturation = 0.8, brightness = 0.6 },
 }
+
+local github2 = term.color.get_builtin_schemes()['Github']
+github2.ansi[4] = '#ffa500'
+config.color_scheme = 'Github2'
+config.color_schemes = { ['Github2'] = github2 }
 
 config.leader = { key = 'a', mods = 'CTRL' }
 config.keys = {
