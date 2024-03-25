@@ -1,5 +1,6 @@
 local term = require('wezterm')
 local act = term.action
+local act_cb = term.action_callback
 
 local config = {
   term = 'wezterm',
@@ -11,6 +12,7 @@ local config = {
   tab_bar_at_bottom = true,
   hide_tab_bar_if_only_one_tab = true,
   cursor_blink_rate = 0,
+  status_update_interval = 20000,
   font = term.font_with_fallback({
     {
       family = 'Fira Code',
@@ -88,6 +90,31 @@ config.keys = {
     key = 'RightArrow',
     mods = 'CTRL|SHIFT',
     action = act.AdjustPaneSize({ 'Right', 1 })
+  },
+  {
+    key = 'Enter',
+    mods = 'LEADER',
+    action = act_cb(function(win, _)
+      local id = tostring(win:window_id())
+      local dim = win:get_dimensions()
+      if dim.is_full_screen then return end
+
+      local state = term.GLOBAL.toogle_window_state or {}
+      state[id] = state[id] or {
+        toogled = false,
+        w = dim.pixel_width,
+        h = dim.pixel_height,
+      }
+      local new_w, new_h
+      if state[id].toogled then
+        new_w, new_h = state[id].w, state[id].h
+      else
+        new_w, new_h = 1200, 850
+      end
+      state[id].toogled = not state[id].toogled
+      term.GLOBAL.toogle_window_state = state
+      win:set_inner_size(new_w, new_h)
+    end)
   },
 }
 
