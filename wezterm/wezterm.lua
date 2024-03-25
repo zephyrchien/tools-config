@@ -2,14 +2,15 @@ local term = require('wezterm')
 local act = term.action
 
 local config = {
+  term = 'wezterm',
+  front_end = "WebGpu",
   use_ime = true,
   use_dead_keys = false,
   use_fancy_tab_bar = true,
   tab_max_width = 64,
   tab_bar_at_bottom = true,
   hide_tab_bar_if_only_one_tab = true,
-  term = 'wezterm',
-  front_end = "WebGpu",
+  cursor_blink_rate = 0,
   font = term.font_with_fallback({
     {
       family = 'Fira Code',
@@ -19,7 +20,7 @@ local config = {
         'cv11', 'ss03', 'ss05', 'ss09'
       }
     }, 'FiraCode Nerd Font' }),
-  font_size = 16,
+  font_size = 14,
   color_scheme = 'Github',
   default_cursor_style = 'SteadyBar',
   inactive_pane_hsb = { saturation = 0.8, brightness = 0.6 },
