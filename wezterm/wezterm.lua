@@ -35,6 +35,11 @@ config.color_schemes = { ['Github2'] = github2 }
 config.leader = { key = 'a', mods = 'CTRL' }
 config.keys = {
   {
+    key = 'a',
+    mods = 'LEADER',
+    action = act.SendKey({ key = 'a', mods = 'CTRL' })
+  },
+  {
     key = 'z',
     mods = 'LEADER',
     action = act.TogglePaneZoomState
