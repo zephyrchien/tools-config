@@ -23,6 +23,7 @@ local config = {
     }, 'FiraCode Nerd Font' }),
   font_size = 14,
   default_cursor_style = 'SteadyBar',
+  adjust_window_size_when_changing_font_size = false,
   inactive_pane_hsb = { saturation = 0.8, brightness = 0.6 },
 }
 
