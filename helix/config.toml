@@ -5,6 +5,7 @@ mouse = false
 true-color = true
 auto-format = false
 text-width = 120
+popup-border = "popup"
 shell = ["bash", "-c"]
 bufferline = "multiple"
 line-number = "relative"
