@@ -1,6 +1,8 @@
 inherits = "github-light"
 
-"ui.background" = { fg = "white" }
+"ui.background" = {}
+"ui.popup" = { bg = "canvas.default" }
+
 "type" = { fg = "scale.orange.6" }
 "type.builtin" = { fg = "scale.orange.6" } 
 "function.method" = "home.orange"
