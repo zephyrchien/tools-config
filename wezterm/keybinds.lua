@@ -107,11 +107,6 @@ local keybinds = {
   {
     key = 'w',
     mods = 'LEADER',
-    action = act.SpawnWindow
-  },
-  {
-    key = 'W',
-    mods = 'LEADER',
     action = act_cb(function(_, pane)
       pane:move_to_new_window()
     end)
