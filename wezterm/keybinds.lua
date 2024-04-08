@@ -104,7 +104,18 @@ local keybinds = {
       win:set_inner_size(new_w, new_h)
     end)
   },
+  {
+    key = 'w',
+    mods = 'LEADER',
+    action = act.SpawnWindow
+  },
+  {
+    key = 'W',
+    mods = 'LEADER',
+    action = act_cb(function(_, pane)
+      pane:move_to_new_window()
+    end)
+  },
 }
 
 return keybinds
-

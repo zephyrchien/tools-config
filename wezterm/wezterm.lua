@@ -41,7 +41,11 @@ config.mouse_bindings = {
 }
 
 -- keybindings --
-config.leader = { key = 'a', mods = 'CTRL' }
+config.leader = {
+  key = 'a',
+  mods = 'CTRL',
+  timeout_milliseconds = 1200
+}
 config.keys = require('keybinds')
 
 return config
