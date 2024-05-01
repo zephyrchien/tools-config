@@ -2,6 +2,7 @@
 
 base=$(pwd)
 
+ln -sf $base/zsh/zshrc ~/.zshrc
 ln -sf $base/tmux/tmux.conf ~/.tmux.conf
 ln -sf $base/helix ~/.config/helix
 ln -sf $base/nvim ~/.config/nvim
