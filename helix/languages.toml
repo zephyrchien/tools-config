@@ -5,7 +5,7 @@ args = ["--header-insertion=never"]
 [use-grammars]
 only = [
   "c", "cpp", "d", "rust", "zig", "go", "haskell",
-  "javascript", "typescript", "jsx", "tsx", "css",
+  "javascript", "typescript", "html", "css", "jsx", "tsx",
   "python", "lua", "bash",
   "json", "toml", "yaml", "make", "cmake"
 ]
