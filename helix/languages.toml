@@ -1,6 +1,6 @@
 [language-server.clangd]
 command = "clangd"
-args = ["--header-insertion=never"]
+args = ["--header-insertion=never", "--completion-style=detailed"]
 
 [use-grammars]
 only = [
