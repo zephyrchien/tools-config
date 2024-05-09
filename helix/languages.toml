@@ -2,6 +2,10 @@
 command = "clangd"
 args = ["--header-insertion=never", "--completion-style=detailed"]
 
+[language-server.tailwindcss-lsp]
+command = "tailwindcss-language-server"
+args = ["--stdio"]
+
 [use-grammars]
 only = [
   "c", "cpp", "d", "rust", "zig", "go", "haskell",
@@ -29,8 +33,10 @@ language-servers = ["pyright"]
 [[language]]
 name = "jsx"
 block-comment-tokens = { start = "{/*", end = "*/}" }
+language-servers = ["typescript-language-server", "tailwindcss-lsp"]
 
 [[language]]
 name = "tsx"
 block-comment-tokens = { start = "{/*", end = "*/}" }
+language-servers = ["typescript-language-server", "tailwindcss-lsp"]
 
