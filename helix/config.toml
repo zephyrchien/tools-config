@@ -21,7 +21,6 @@ right = [
   "file-encoding"
 ]
 
-
 [editor.cursor-shape]
 insert = "bar"
 
@@ -32,6 +31,9 @@ hidden = true
 #render = true
 #character = "╎"
 #skip-levels = 3
+
+[editor.soft-wrap]
+enable = true
 
 [editor.whitespace]
 render = { tab = "all" }
