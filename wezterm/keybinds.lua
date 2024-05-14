@@ -113,4 +113,13 @@ local keybinds = {
   },
 }
 
+-- switch tabs
+for i = 1, 8 do
+  table.insert(keybinds, {
+    key = tostring(i),
+    mods = 'CTRL',
+    action = act.ActivateTab(i - 1),
+  })
+end
+
 return keybinds
