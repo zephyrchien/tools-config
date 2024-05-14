@@ -18,7 +18,7 @@ right = [
   "selections",
   "position-percentage",
   "file-type",
-  "file-encoding"
+  "file-encoding",
 ]
 
 [editor.cursor-shape]
@@ -51,6 +51,10 @@ end = "no_op"
 "X" = "extend_line_above"
 "C-x" = "extend_to_line_bounds"
 "C-r" = ":reload"
+"C-f" = ":format"
+"C-s" = ":write"
+"C-q" = ":buffer-close"
+"C-a" = "save_selection"
 "C-h" = "jump_view_left"
 "C-l" = "jump_view_right"
 "C-k" = "jump_view_up"
@@ -81,4 +85,3 @@ end = "no_op"
 "A-l" = "move_char_right"
 "A-j" = "move_visual_line_down"
 "A-k" = "move_visual_line_up"
-
