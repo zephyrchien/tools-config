@@ -108,6 +108,7 @@ alias cddl='cd ~/Downloads'
 alias cdwk='cd ~/Documents/workspace'
 alias cdtmp='mkdir -p /tmp/test && cd /tmp/test'
 alias treei='tree --gitignore'
+alias gits='git status'
 
 function phonecp() {
   dst='~/storage/downloads/'
