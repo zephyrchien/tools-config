@@ -6,6 +6,9 @@ args = ["--header-insertion=never", "--completion-style=detailed"]
 command = "tailwindcss-language-server"
 args = ["--stdio"]
 
+[language-server.typescript-language-server]
+config.preferences.importModuleSpecifierPreference = "non-relative"
+
 [use-grammars]
 only = [
   "c", "cpp", "d", "rust", "zig", "go", "haskell",
