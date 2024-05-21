@@ -1,0 +1,4 @@
+[/]
+binding='<Control><Alt>t'
+command='wezterm-gui start --cwd=/tmp'
+name='terminal'
