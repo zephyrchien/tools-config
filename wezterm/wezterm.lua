@@ -42,6 +42,7 @@ config.mouse_bindings = {
 }
 
 -- keybindings --
+config.disable_default_key_bindings = true
 config.leader = {
   key = 'a',
   mods = 'CTRL',

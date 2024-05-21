@@ -111,6 +111,32 @@ local keybinds = {
       pane:move_to_new_window()
     end)
   },
+  -- origin --
+  {
+    key = 'c',
+    mods = 'CTRL|SHIFT',
+    action = act.CopyTo('Clipboard')
+  },
+  {
+    key = 'v',
+    mods = 'CTRL|SHIFT',
+    action = act.PasteFrom('Clipboard')
+  },
+  {
+    key = 'n',
+    mods = 'CTRL|SHIFT',
+    action = act.SpawnWindow
+  },
+  {
+    key = 't',
+    mods = 'CTRL|SHIFT',
+    action = act.SpawnTab('CurrentPaneDomain')
+  },
+  {
+    key = 'L',
+    mods = 'CTRL|SHIFT',
+    action = act.ShowDebugOverlay
+  },
 }
 
 -- switch tabs
