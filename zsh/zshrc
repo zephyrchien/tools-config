@@ -109,6 +109,8 @@ alias cdwk='cd ~/Documents/workspace'
 alias cdtmp='mkdir -p /tmp/test && cd /tmp/test'
 alias treei='tree --gitignore'
 alias gits='git status'
+# alias fs='nautilus --browser'
+alias fs='xdg-open'
 
 function phonecp() {
   dst='~/storage/downloads/'
