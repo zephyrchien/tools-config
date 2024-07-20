@@ -11,7 +11,7 @@ config.preferences.importModuleSpecifierPreference = "non-relative"
 
 [use-grammars]
 only = [
-  "c", "cpp", "d", "rust", "zig", "go", "haskell",
+  "c", "cpp", "d", "rust", "zig", "go", "ocaml", "haskell",
   "javascript", "typescript", "html", "css", "jsx", "tsx",
   "python", "lua", "bash",
   "json", "toml", "yaml", "make", "cmake"
