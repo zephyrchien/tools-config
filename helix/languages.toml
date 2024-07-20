@@ -26,6 +26,14 @@ name = "cpp"
 indent = { tab-width = 2, unit = "  " }
 
 [[language]]
+name = "ocaml"
+formatter = { command = "ocamlformat", args = [
+  "-",
+  "--impl",
+  "--enable-outside-detected-project",
+]}
+
+[[language]]
 name = "haskell"
 indent = { tab-width = 2, unit = "  " }
 
