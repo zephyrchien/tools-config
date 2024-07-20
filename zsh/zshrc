@@ -106,6 +106,7 @@ alias yay='yay --assume-installed go --assume-installed cargo --assume-installed
 alias pacman='pacman --assume-installed go --assume-installed cargo --assume-installed rust'
 alias cddl='cd ~/Downloads'
 alias cdwk='cd ~/Documents/workspace'
+alias cdqlo='cd ~/Documents/work/quollio'
 alias cdtmp='mkdir -p /tmp/test && cd /tmp/test'
 alias treei='tree --gitignore'
 alias gits='git status'
@@ -141,3 +142,6 @@ alias pcp=phonecp
 alias pcp_pic=phonecp_pic
 alias pcp_cb=phonecp_clipboard
 
+# opam configuration
+[[ ! -r /home/zephyr/.opam/opam-init/init.zsh ]] || source /home/zephyr/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
+OCAMLPATH=/home/zephyr/.opam/default/lib
