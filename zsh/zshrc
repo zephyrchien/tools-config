@@ -143,5 +143,4 @@ alias pcp_pic=phonecp_pic
 alias pcp_cb=phonecp_clipboard
 
 # opam configuration
-[[ ! -r /home/zephyr/.opam/opam-init/init.zsh ]] || source /home/zephyr/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
-OCAMLPATH=/home/zephyr/.opam/default/lib
+[[ ! -r $HOME/.opam/opam-init/init.zsh ]] || source $HOME/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
