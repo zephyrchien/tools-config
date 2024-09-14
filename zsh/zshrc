@@ -106,12 +106,33 @@ alias yay='yay --assume-installed go --assume-installed cargo --assume-installed
 alias pacman='pacman --assume-installed go --assume-installed cargo --assume-installed rust'
 alias cddl='cd ~/Downloads'
 alias cdwk='cd ~/Documents/workspace'
+alias cdgo='cdwk && cd go'
+alias cdrs='cdwk && cd rust'
+alias cdcpp='cdwk && cd c++'
 alias cdqlo='cd ~/Documents/work/quollio'
 alias cdtmp='mkdir -p /tmp/test && cd /tmp/test'
+alias cdrepo='cd $(git root)'
 alias treei='tree --gitignore'
 alias gits='git status'
 # alias fs='nautilus --browser'
 alias fs='xdg-open'
+
+function toggle_touchpad() {
+  enable=$1
+  if [ "$#" -ne 1 ]; then
+    enable=1
+  fi
+
+  if [ "${enable}" -eq 0 ]; then
+    echo "disable touchpad.."
+    gsettings set org.gnome.desktop.peripherals.touchpad disable-while-typing 'false'
+    gsettings set org.gnome.desktop.peripherals.touchpad send-events 'disabled'
+  else
+    echo "enable touchpad.."
+    gsettings set org.gnome.desktop.peripherals.touchpad disable-while-typing 'true'
+    gsettings set org.gnome.desktop.peripherals.touchpad send-events 'enabled'
+  fi
+}
 
 function phonecp() {
   dst='~/storage/downloads/'
