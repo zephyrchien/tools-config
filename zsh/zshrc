@@ -117,7 +117,7 @@ alias gits='git status'
 # alias fs='nautilus --browser'
 alias fs='xdg-open'
 
-function toggle_touchpad() {
+function touchpad_toggle() {
   enable=$1
   if [ "$#" -ne 1 ]; then
     enable=1
