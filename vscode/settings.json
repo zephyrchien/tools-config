@@ -1,0 +1,179 @@
+{
+    "diffEditor.renderSideBySide": false,
+    "security.workspace.trust.untrustedFiles": "open",
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.lineHeight": 0,
+    "editor.fontSize": 16,
+    "editor.fontWeight": "400",
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": "'calt' 0, 'clig' 0, 'liga' 0, 'cv11', 'ss03', 'ss05', 'ss09'",
+    "editor.selectionClipboard": false,
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": [
+                    "comment",
+                    "entity.name.type.class", //class names
+                    //"constant", //String, Number, Boolean…, this, super
+                    "storage.modifier", //static keyword
+                    "storage.type.class", //class keyword
+                    "storage.type.function",
+                    "storage.type.interface",
+                    "keyword", //import, export, return…
+                ],
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "scope": [
+                    "invalid",
+                    "keyword.operator",
+                    "keyword.control.return",
+                    "constant.numeric.css",
+                    "keyword.other.unit.px.css",
+                    //"constant.numeric.decimal.js",
+                    //"constant.numeric.json"
+                ],
+                "settings": {
+                    "fontStyle": ""
+                }
+            },
+            {
+                "scope": "variable.other.local",
+                "settings": {
+                    "fontStyle": "underline"
+                }
+            },
+            {
+                "scope": "variable.parameter",
+                "settings": {
+                    "foreground": "#36c2ce"
+                }
+            }
+        ]
+    },
+    "editor.suggestSelection": "first",
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
+    "cmake.configureOnOpen": true,
+    "explorer.confirmDelete": false,
+    "clangd.arguments": [
+        "--compile-commands-dir=${workspaceFolder}/build",
+        "--header-insertion=never"
+    ],
+    "editor.detectIndentation": false,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.wordWrapColumn": 120,
+    "settingsSync.ignoredExtensions": [
+        "redhat.vscode-yaml"
+    ],
+    "dotnetAcquisitionExtension.existingDotnetPath": [
+        {
+            "extensionId": "msazurermtools.azurerm-vscode-tools",
+            "path": "/usr/bin/dotnet"
+        },
+        {
+            "extensionId": "josetr.cmake-language-support-vscode",
+            "path": "/usr/bin/dotnet"
+        },
+    ],
+    "rust-analyzer.hover.actions.debug.enable": false,
+    "rust-analyzer.hover.actions.run.enable": false,
+    "rust-analyzer.inlayHints.chainingHints.enable": false,
+    "rust-analyzer.inlayHints.parameterHints.enable": false,
+    "rust-analyzer.inlayHints.typeHints.enable": false,
+    "rust-analyzer.inlayHints.closingBraceHints.enable": false,
+    "rust-analyzer.inlayHints.renderColons": false,
+    "rust-analyzer.lens.implementations.enable": false,
+    "rust-analyzer.lens.debug.enable": false,
+    "rust-analyzer.lens.enable": false,
+    "rust-analyzer.lens.forceCustomCommands": false,
+    "workbench.colorTheme": "GitHub Light Default",
+    "editor.inlayHints.enabled": "off",
+    "zls.enable_snippets": true,
+    "zls.zig_exe_path": "/home/zephyr/zig/zig",
+    "editor.lineNumbers": "on",
+    "zls.check_for_update": false,
+    "zls.enable_ast_check_diagnostics": true,
+    "zls.zig_lib_path": "/home/zephyr/zig/lib",
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "zls.path": "/home/zephyr/Documents/sdk/zig/zls",
+    "haskell.manageHLS": "GHCup",
+    "redhat.telemetry.enabled": false,
+    "haskell.plugin.class.codeLensOn": false,
+    "haskell.plugin.eval.config.diff": false,
+    "haskell.plugin.eval.globalOn": false,
+    "haskell.plugin.ghcide-code-actions-imports-exports.globalOn": false,
+    "haskell.plugin.eval.config.exception": true,
+    "haskell.plugin.importLens.codeActionsOn": false,
+    "haskell.plugin.importLens.codeLensOn": false,
+    "haskell.upgradeGHCup": false,
+    "haskell.plugin.tactics.codeLensOn": false,
+    "haskell.plugin.refineImports.codeLensOn": false,
+    "haskell.plugin.rename.config.crossModule": true,
+    "haskell.plugin.ghcide-type-lenses.globalOn": false,
+    "d.dubCompiler": "dmd",
+    "d.stdlibPath": "auto",
+    "d.dubPath": "/usr/bin/dub",
+    "d.aggressiveUpdate": false,
+    "asm-code-lens.enableCodeLenses": false,
+    "zig.zls.path": "/home/zephyr/.local/bin/zls",
+    "cmake.generator": "Unix Makefiles",
+    "zig.path": "/home/zephyr/Documents/sdk/zig/zig",
+    "zig.initialSetupDone": true,
+    "cmake.options.statusBarVisibility": "visible",
+    "cmake.showOptionsMovedNotification": false,
+    "workbench.startupEditor": "none",
+    "git.openRepositoryInParentFolders": "never",
+    "editor.defaultColorDecorators": true,
+    "vim.cursorStylePerMode.replace": "underline",
+    "vim.cursorStylePerMode.visual": "block",
+    "vim.cursorStylePerMode.visualblock": "block",
+    "vim.cursorStylePerMode.normal": "block",
+    "vim.cursorStylePerMode.insert": "line",
+    "vim.cursorStylePerMode.visualline": "block",
+    "vim.handleKeys": {
+        "<C-f>": false
+    },
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "U"
+            ],
+            "after": [
+                "<C-R>"
+            ]
+        },
+        {
+            "before": [
+                "<Space>",
+                "k"
+            ],
+            "commands": [
+                {
+                    "command": "editor.action.showDefinitionPreviewHover"
+                }
+            ]
+        }
+    ],
+    "clangd.path": "/home/zephyr/Documents/sdk/clang/bin/clangd",
+    "cmake.pinnedCommands": [
+        "workbench.action.tasks.configureTaskRunner",
+        "workbench.action.tasks.runTask"
+    ],
+    "go.lintTool": "golangci-lint",
+    "go.lintFlags": [
+        "--config=${workspaceFolder}/.golangci.yml",
+        "--new=false",
+        "--new-from-rev=HEAD~4"
+    ],
+    "files.autoSave": "afterDelay"
+}
