@@ -46,3 +46,6 @@ case ":${PATH}:" in
         ;;
 esac
 
+# ocaml
+export OCAMLPATH=$HOME/.opam/default/lib
+
