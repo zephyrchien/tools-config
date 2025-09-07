@@ -2,6 +2,23 @@ local term = require('wezterm')
 local act = term.action
 local act_cb = term.action_callback
 
+local launch_fish = {
+  label = "fish",
+  args = { "fish" },
+  domain = { DomainName = "local" },
+}
+
+local function new_tab(window, pane)
+  if pane:get_domain_name() == "local" then
+    local exe = pane:get_foreground_process_name()
+    if exe and exe:lower():match("fish") then
+      window:perform_action(term.action { SpawnCommandInNewTab = launch_fish }, pane)
+      return
+    end
+  end
+  window:perform_action(term.action { SpawnTab = "CurrentPaneDomain" }, pane)
+end
+
 local keybinds = {
   {
     key = 'a',
@@ -130,7 +147,7 @@ local keybinds = {
   {
     key = 't',
     mods = 'CTRL|SHIFT',
-    action = act.SpawnTab('CurrentPaneDomain')
+    action = term.action_callback(new_tab)
   },
   {
     key = 'L',
