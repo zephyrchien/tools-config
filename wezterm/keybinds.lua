@@ -150,7 +150,12 @@ local keybinds = {
     action = term.action_callback(new_tab)
   },
   {
-    key = 'L',
+    key = 'f',
+    mods = 'CTRL|SHIFT',
+    action = act.Search("CurrentSelectionOrEmptyString")
+  },
+  {
+    key = 'l',
     mods = 'CTRL|SHIFT',
     action = act.ShowDebugOverlay
   },
