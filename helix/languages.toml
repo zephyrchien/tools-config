@@ -1,6 +1,10 @@
 [language-server.clangd]
 command = "clangd"
-args = ["--header-insertion=never", "--completion-style=detailed"]
+args = [
+  "--header-insertion=never",
+  "--completion-style=detailed",
+  "--experimental-modules-support",
+]
 
 [language-server.tailwindcss-lsp]
 command = "tailwindcss-language-server"
