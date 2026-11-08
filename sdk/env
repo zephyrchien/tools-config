@@ -13,6 +13,17 @@ case ":${PATH}:" in
         ;;
 esac
 
+# cuda
+__CUDA_HOME__="/opt/cuda"
+case ":${PATH}:" in
+    *:"${__CUDA_HOME__}/bin":*)
+        ;;
+    *)
+	export CUDA_BIN="${__CUDA_HOME__}/bin"
+	export PATH="$CUDA_BIN:$PATH"
+        ;;
+esac
+
 #golang
 __GO_HOME__="${__SDK_HOME__}/go"
 case ":${PATH}:" in
