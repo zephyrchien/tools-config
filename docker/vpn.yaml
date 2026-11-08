@@ -8,6 +8,8 @@ services:
       - /etc/wireproxy/cn.conf:/etc/wireproxy/config
     networks:
       - vpn_net
+    logging:
+      driver: "none"
     depends_on:
       iptables-setup:
         condition: service_completed_successfully
