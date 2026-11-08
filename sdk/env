@@ -60,3 +60,6 @@ esac
 # ocaml
 export OCAMLPATH=$HOME/.opam/default/lib
 
+# docker-compose
+__DOCKER_COMPOSE_HOME__="${__SDK_HOME__}/docker-compose"
+
