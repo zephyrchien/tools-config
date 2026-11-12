@@ -10,6 +10,7 @@ shell = ["bash", "-c"]
 bufferline = "multiple"
 line-number = "relative"
 default-line-ending = "lf"
+clipboard-provider = "wayland"
 
 [editor.statusline]
 right = [
